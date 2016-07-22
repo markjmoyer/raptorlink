@@ -1,4 +1,4 @@
-# NASCAR HTML Cut-Ups
+# RAPTOR LINK WEBSITE
 
 
 ## Project Dependencies
@@ -11,7 +11,7 @@ Following are the dependencies and packages used in developing this website:
 * [Bower](http://bower.io/) - Package Manager for the Web
 * [jQuery](http://jquery.com/) - The Write Less, Do More JavaScript Library
 * [Modernizr](http://modernizr.com/) - Detects HTML5 and CSS3 features in the user’s browser
-* [LESS](http://lesscss.org/) - CSS Pre-Processor
+* [SASS](http://sass-lang.com//) - CSS Pre-Processor
 
 &nbsp;
 
@@ -24,9 +24,8 @@ install to use the build tools.
 ### Installing Git
 Visit the [Git](http://git-scm.com/downloads) downloads page and select the installer
 for your particular environment. Run the installer and you're all set to start using
-the Git version control system. If you're new to Git, there is a
-[Git How-To](http://confluence.nascar.com/display/NAS/How-to%3A+Using+Git+SCM)
-in the Nascar Digital Media wiki that can help you get started.
+the Git version control system. If you're new to Git, there is a ton of documentation
+online that will help you get started.
 
 Once you have installed Git, you will need to checkout the source code into your
 local web root. For more information on finding your web root, please see the section
@@ -34,7 +33,7 @@ titled [Viewing Your Local Website](#lws) below. Once you have identified your
 web root, open a command-line terminal and enter the following command:
 
     $> cd <YOUR_WEB_ROOT>
-    $> git clone http://<YOUR_USER_NAME>@stash.nascar.com/scm/nas/nascar-html-cutups.git
+    $> git clone https://github.com/markjmoyer/raptorlink.git
 
 ### Installing NodeJS and NPM
 Visit the [NodeJS](http://nodejs.org/) website and download the installer for your
@@ -61,23 +60,22 @@ and separated from your custom code.
 
     $> npm install -g bower
 
-### <a name="fin"></a>Finishing Your install
+### Finishing Your install
 Once you have installed Node, Grunt and Bower, you're ready to initialize your project
 by running "npm install" from the command line inside your target directory.
 
     $> npm install
 
-### <a name="lws"></a>Viewing Your Local Website
-Assuming you have setup a local webserver, and assuming that you have cloned the
+### Viewing Your Local Website
+Assuming you have setup a local web server, and assuming that you have cloned the
 source code for this project into your web root, you should be able to access the
 website at:
 
-* [http://localhost/nascar-html-cutups/default/dist/index.html](http://localhost/nascar-html-cutups/default/dist/index.html)
+* [http://localhost:8080/dist/index.html)
 
 #### Common Web Roots
-Following are the common locations where you will find your Web Root on your computer.
-If you do not have a web server installed, please install a server that is appropriate
-for your environment:
+I prefer to use an NPM package called http-server and run the command http-server. However,
+you may choose to run some of the instances listed below:
 
 * __Windows__ (IIS built-in)
  * c:/inetpub/wwwroot/
@@ -87,6 +85,7 @@ for your environment:
  * /var/www/html/
  * /home/www/
  * /usr/local/www/
+ * localhost:8080
 
 
 #### Finding Your Web Root in Unix/Linux
@@ -112,7 +111,7 @@ that exist for supporting the commands in the Gruntfile.
 From the command-line, in the root directory of the project, run the command `grunt`
 Once completed, this task will perform the following actions:
 
-* Compile LESS into CSS
+* Compile SASS into CSS
 * [Lint](http://csslint.net/) your Compiled CSS
 * Minify the Compiled CSS into a *.min.css file
 * [Lint](http://jshint.com/) your JavaScript
@@ -140,7 +139,7 @@ in the background.
 In order to launch Grunt watch, all you need to do is open a command-line terminal,
 cd to your working directory and type `grunt watch`:
 
-    $> cd /Library/WebServer/Documents/nascar-html-cutups/default/
+    $> cd <to the root of your project>
     $> grunt watch
     $> Running "watch" task
     $> Waiting...
@@ -161,9 +160,9 @@ website are stored here in context-specific directories. Files are written here 
 the Grunt tasks described above. When authoring CSS or JavaScript, you should never
 write files directly into this directory.
 
-#### LESS / CSS
-When authoring CSS for this project, you should be authoring using LESS - writing
-\*.less files into the __/src/assets/less/__ directory. These files are then parsed
+#### SASS / CSS
+When authoring CSS for this project, you should be authoring using SASS - writing
+\*.scss files into the __/src/assets/scss/__ directory. These files are then parsed
 into CSS by the Grunt tasks described above.
 
 #### JavaScript
@@ -174,16 +173,14 @@ and minified into one single file, complete with a version number and stored in 
 __/dist/assets/dist/js/__ directory.
 
 #### Images
-Nothing really special about images in this website, but you should be using \*.png
-files as a default. Sometimes a \*.gif or \*.jpg may be required, but by and large
-you should be building with \*.png's.
+Nothing special about images in this website.
 
 ### Bower Components
-When you install resources using Bower, they're stored in this directory. For the most
-part you don't need to touch this and thanks to Grunt and the `grunt-wiredep` plugin
-you won't even need to reference these files in your code. Just drop the placeholders
-for your CSS or JS into your HTML files, and when Grunt runs, the Bower resources will
-be inserted into your code.
+When you install resources using Bower, they're stored in this directory. You do not
+need to touch this and thanks to Grunt and the `grunt-wiredep` plugin you won't even
+need to reference these files in your code. Just drop the placeholders for your CSS
+or JS into your HTML files, and when Grunt runs, the Bower resources will be inserted
+into your code.
 
     <html>
     <head>
@@ -221,31 +218,9 @@ directly into your templates during the build process.
     </html>
 
 
-#### Variables in HTML
-You can write variables into your templates. Using the example include
-above, we could write the following content into the __meta.html__ file:
-
-    <title>@@title</title>
-    <meta name="description" content="@@description">
-    <meta name="keywords" content="@@keywords">
-
-Simply by defining the values in our __package.json__ file:
-
-    "title": "NASCAR HTML Cutups",
-    "description": "This is an HTML Generator for the NASCAR HTML Cutups",
-    "keywords": "NASCAR,nascar.com,HTML,templates",
-
-&nbsp;
-
-
 ## Deploying Code
 
 Once Grunt has completed, you should test and ultimately deploy your code from the
-__/dist/__ directory, as this is the "distribution" version of the website. There
-is a [Bamboo Job](http://bamboo.nascar.com/browse/NH-HC/) setup to deploy code automatically
-when commits are made to the master branch of the Git repository. Issuing a Pull Request and
-merging that code will result in the final "dist" directory being deployed to the target server.
-
-You can see your code online after deployment completes at:
-
-* [http://dev-cutups.nascar.com/your-project-name/](http://dev-cutups.nascar.com/your-project-name/)
+__/dist/__ directory, as this is the "distribution" version of the website. Issuing a
+Pull Request and merging that code will result in the final "dist" directory being deployed
+ to the target server.
