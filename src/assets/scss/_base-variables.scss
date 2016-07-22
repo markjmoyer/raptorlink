@@ -1,0 +1,30 @@
+
+// *******************************************************************************
+// * DO NOT MAKE PROJECT-SPECIFIC MODIFICATIONS TO THIS FILE.
+// *******************************************************************************
+
+
+// Desktop Sizes
+$maxWidth: 1000px;                      // Overall content width
+$borderWidth: 20px;                     // Outter border/gutter of the page
+$borderWidthHalf: $borderWidth / 2; // Half of the outter border/gutter of the page
+$gutterWidth: 20px;                     // Inner gutter between columns
+$gutterWidthHalf: $gutterWidth / 2; // Half of the inner gutter
+$sectionMargin: 20px;                   // Margin below each section element
+$boxPadding: 10px;                      // Default box padding on containers
+
+// Tablet Sizes
+$maxWidthTablet: 768px;
+$borderWidthTablet: 20px;
+$gutterWidthTablet: 20px;
+$gutterWidthHalfTablet: $gutterWidthTablet / 2;
+$sectonMarginTablet: 20px;
+$boxPaddingTablet: $boxPadding;
+
+// Mobile Sizes
+$maxWidthMobile: 320px;
+$borderWidthMobile: 10px;
+$gutterWidthMobile: 10px;
+$gutterWidthHalfMobile: $gutterWidthMobile / 2;
+$sectonMarginMobile:  $sectionMargin / 2;
+$boxPaddingMobile: $boxPadding / 2;

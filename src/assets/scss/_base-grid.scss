@@ -1,0 +1,188 @@
+// *******************************************************************************
+// * DO NOT MAKE PROJECT-SPECIFIC MODIFICATIONS TO THIS FILE.
+// *******************************************************************************
+
+
+    .#{$title} {
+  overflow: hidden;
+
+  .row {
+    width: $maxWidth;
+    min-height: 1px;
+    clear: both;
+    margin: 0 auto;
+    overflow: hidden;
+
+    &.no-margin{
+      margin: 0;
+    }
+
+    &.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    div[class*='col-'] {
+
+      min-height: 1px;
+      float: left;
+      margin: 0 $gutterWidthHalf;
+      padding: 0;
+      overflow: hidden;
+
+      &:first-child{
+        margin-left: $borderWidth;
+      }
+
+      &:last-child{
+        margin-right: $borderWidth;
+      }
+
+      &.no-margin{
+        margin: 0;
+      }
+
+    }
+
+    .col-thirds{
+      width: calc(( $maxWidth - ( $borderWidth*2 )) / 3);
+      margin: 0;
+    }
+
+    .col-1{
+      width: 300px;
+    }
+
+    .col-2{
+      width: 650px;
+    }
+
+    .col-3{
+      width: 100%;
+      float: none;
+    }
+
+  }
+
+
+// Different rules inside of a container
+
+  .container{
+
+    min-width: calc($maxWidthMobile - ( $borderWidthMobile*2));
+    max-width: $maxWidth;
+    margin: 0 auto;
+    overflow: hidden;
+
+   .row{
+     width: 100%;
+   }
+
+  }
+
+}
+
+// Tablet Grid Classes
+
+.tablet {
+
+  .#{$title} {
+
+    .row{
+      width: $maxWidthTablet;
+      margin: 0 auto;
+    }
+
+    div[class*='col-']{
+      min-height: 1px;
+      float: left;
+      margin: 0 $gutterWidthHalfTablet;
+      padding: 0;
+      overflow: hidden;
+
+      &:first-child{
+        margin-left: $borderWidthTablet;
+      }
+
+      &:last-child{
+        margin-right: $borderWidthTablet;
+      }
+
+      &.no-margin{
+        margin: 0;
+      }
+
+    }
+
+
+    .col-thirds{
+      width: calc(( $maxWidthTablet - ( $borderWidthTablet*2 )) / 3);
+      margin: 0;
+    }
+
+    .col-2{
+      width: calc($maxWidthTablet - ( $borderWidthTablet * 2 ) - 300 - $gutterWidthTablet);
+    }
+
+    .col-3{
+      width: 100%;
+      float: none;
+    }
+
+    .container{
+      max-width: $maxWidthTablet;
+    }
+
+  }
+
+}
+
+
+
+// Mobile Grid Classes
+
+.mobile {
+
+  .#{$title} {
+
+    .row{
+      width: 100%;
+      margin: 0 0 $borderWidthMobile auto;
+
+      &.no-margin{
+        margin: 0;
+      }
+
+    }
+
+    div[class*='col-']{
+      width: calc($maxWidthMobile);
+      margin: 0 auto;
+      float: none;
+
+      &:first-child{
+        margin: 0 auto;
+      }
+
+      &:last-child{
+        margin: 0 auto;
+      }
+
+    }
+
+    .col-1{
+      width: calc( $maxWidthMobile - $borderWidthMobile );
+    }
+
+    .col-2{
+      width: calc( $maxWidthMobile - $borderWidthMobile );
+    }
+
+    .col-3{
+      width: calc( $maxWidthMobile - $borderWidthMobile );
+      float: none;
+    }
+
+  }
+
+}

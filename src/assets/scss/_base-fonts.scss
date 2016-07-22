@@ -1,0 +1,90 @@
+
+// *******************************************************************************
+// * DO NOT MAKE PROJECT-SPECIFIC MODIFICATIONS TO THIS FILE.
+// *******************************************************************************
+
+
+@font-face {
+	font-family: 'NeoSans-Italic';
+	src: url('../fonts/Neo-Sans-Italic/NeoSans-Italic.svg') format('svg');
+	src: url('../fonts/Neo-Sans-Italic/NeoSans-Italic.eot');
+    src: url('../fonts/Neo-Sans-Italic/NeoSans-Italic.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Neo-Sans-Italic/NeoSans-Italic.woff') format('woff'),
+		 url('../fonts/Neo-Sans-Italic/NeoSans-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DroidSans-Regular';
+	src:  url('../fonts/Droid_Sans/DroidSans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DroidSans-Bold';
+	src: url('../fonts/Droid_Sans/DroidSans-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DroidSans-Mono';
+	src: url('../fonts/Droid_Sans_Mono/DroidSansMono.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Droid-Serif-Regular';
+	src: url('../fonts/Droid_Serif/DroidSerif.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Droid-Serif-Bold';
+	src: url('../fonts/Droid_Serif/DroidSerif-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Droid-Serif-Italic';
+	src: url('../fonts/Droid_Serif/DroidSerif-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DroidSerif-Bold-Italic';
+	src: url('../fonts/Droid_Serif/DroidSerif-BoldItalic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+// Font Variables
+$font-droidsans-regular: "DroidSans-Regular", "Arial", "Helvetica", sans-serif;
+$font-droidsans-bold: "DroidSans-Bold", "Arial", "Helvetica", sans-serif;
+$font-droidsans-mono: "DroidSans-Mono", "Arial", "Helvetica", sans-serif;
+$font-droidserif-regular: "Droid-Serif-Regular", "Arial", "Helvetica", sans-serif;
+$font-droidserif-bold: "Droid-Serif-Bold", "Arial", "Helvetica", sans-serif;
+$font-droidserif-italic: "Droid-Serif-Italic", "Arial", "Helvetica", sans-serif;
+$font-droidserif-bold-italic: "DroidSerif-Bold-Italic", "Arial", "Helvetica", sans-serif;
+
+$font-helvetica: "Helvetica", "Arial", sans-serif;
+$font-default: "Arial", "Helvetica", sans-serif;
+
+// Font Classes
+.font-droidsans-regular { font-family: $font-droidsans-regular; }
+.font-droidsans-bold { font-family: $font-droidsans-bold; }
+.font-droidsans-mono { font-family: $font-droidsans-mono; }
+.font-droidserif-regular { font-family: $font-droidserif-regular; }
+.font-droidserif-bold { font-family: $font-droidserif-bold; }
+.font-droidserif-italic { font-family: $font-droidserif-italic; }
+.font-droidserif-bold-italic { font-family: $font-droidserif-bold-italic; }
+
+.font-helvetica { font-family: $font-helvetica; }
+.font-default { font-family: $font-default; }

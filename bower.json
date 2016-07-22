@@ -1,0 +1,34 @@
+{
+  "name": "raptorlink",
+  "version": "0.1.54",
+  "authors": [
+    "Mark J Moyer <mark@markjmoyer.com>"
+  ],
+  "description": "RaptorLink, Reptile Habitat Temperature and Humidity Monitoring",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "reptile environment humidity",
+    "reptile environment temperature"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.raptorlink.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "modernizr": "2.8.3",
+    "sortable": "~0.6.0",
+    "bootstrap": "~3.3.6"
+  },
+  "devDependencies": {
+  }
+}

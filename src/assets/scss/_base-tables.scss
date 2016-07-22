@@ -1,0 +1,116 @@
+
+// *******************************************************************************
+// * DO NOT MAKE PROJECT-SPECIFIC MODIFICATIONS TO THIS FILE.
+// *******************************************************************************
+
+
+
+
+  table{
+
+    & .table{
+
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border-collapse: collapse;
+      border: 0;
+
+      td,th{
+        width: 20%;
+        padding: 5px 10px;
+        white-space: nowrap;
+
+        &.center{
+          text-align: center;
+        }
+
+        &.left{
+          text-align: left;
+        }
+
+        &.right{
+          text-align: right;
+        }
+
+        &.justify{
+          text-align: justify;
+        }
+
+      }
+
+      tr td:last-child,
+      tr th:last-child{
+        width: auto;
+      }
+
+      thead{
+
+        tr{
+
+          background-color: $black;
+
+          th{
+            color: $white;
+            font-family: $font-scout-regular;
+            font-size: 18px;
+            font-weight: normal;
+            text-align: left;
+            text-transform: uppercase;
+
+            &[data-sorted-direction="ascending"]:after {
+              content: "\25b2";
+              font-size: 14px;
+              margin: 0 4px;
+            }
+
+            &[data-sorted-direction="descending"]:after {
+              content: "\25bc";
+              font-size: 14px;
+              margin: 0 4px;
+            }
+
+          }
+
+        }
+
+      }
+
+      tbody{
+
+        tr{
+
+          &.odd{
+            background-color: #fff;
+          }
+
+          &.even{
+            background-color: #ccc;
+          }
+
+          &:nth-child(odd){
+            background-color: $white;
+          }
+
+          &:nth-child(even){
+            background-color: $grey-10;
+          }
+
+          td{
+            color: $black;
+            font-family: $font-scout-regular;
+            font-size: 16px;
+
+            a{
+              color: $blue;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }

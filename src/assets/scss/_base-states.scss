@@ -1,0 +1,126 @@
+
+// *******************************************************************************
+// * DO NOT MAKE PROJECT-SPECIFIC MODIFICATIONS TO THIS FILE.
+// *******************************************************************************
+
+
+.relative{
+  position: relative;
+  overflow: hidden;
+}
+
+.no-desktop{
+  display: none;
+}
+
+.on-desktop{
+  display: none;
+}
+
+.no-mobile{
+ display: block;
+}
+
+.on-mobile{
+ display: none;
+}
+
+.on-tablet{
+ display: none;
+}
+
+
+.desktop{
+
+  .on-desktop{
+    display: block;
+  }
+
+  table{
+    tbody tr td,
+    thead tr th{
+      &.no-mobile{
+        display: table-cell;
+      }
+      &.no-tablet{
+        display: table-cell;
+      }
+      &.no-desktop{
+        display: none;
+      }
+      &.on-desktop{
+        display: table-cell;
+      }
+    }
+  }
+
+}
+
+
+.tablet{
+
+  .no-desktop{
+    display: block;
+  }
+
+  .no-tablet{
+    display: none;
+  }
+
+  .on-tablet{
+    display: block;
+  }
+
+  table{
+    tbody tr td,
+    thead tr th{
+      &.no-mobile{
+        display: table-cell;
+      }
+      &.no-desktop{
+        display: table-cell;
+      }
+      &.no-tablet{
+        display: none;
+      }
+      &.on-tablet{
+        display: table-cell;
+      }
+    }
+  }
+
+}
+
+.mobile{
+
+  .no-desktop{
+    display: block;
+  }
+
+  .no-mobile{
+    display: none;
+  }
+
+  .on-mobile{
+    display: block;
+  }
+
+  table{
+    tbody tr td,
+    thead tr th{
+      &.no-tablet{
+        display: table-cell;
+      }
+      &.no-desktop{
+        display: table-cell;
+      }
+      &.no-mobile{
+        display: none;
+      }
+      &.on-mobile{
+        display: table-cell;
+      }
+    }
+  }
+
+}

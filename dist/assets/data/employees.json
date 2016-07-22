@@ -1,0 +1,7 @@
+{
+	"employees": [{
+		"name": [ "Lisa Johnson", "Mark Moyer", "Matthew Moyer" ],
+		"street": [ "1300 Valley View", "9431 Seamill", "9431 Seamill" ],
+		"phone": [ "555 1234567", "555 8675309", "555 2071608" ]
+	}]
+}

@@ -1,0 +1,80 @@
+
+// * Layout customizations specific to this project should be made in this file.
+// * Do not include classes for specific components here. This file should only
+// * contain layout overrides to grids, rows, columns, containers, etc.
+
+
+// General layout
+
+body {
+  margin: 0;
+  background-color: $gold;
+
+  .#{$title} {
+    margin: 20px 0;
+    font-family: $font-default; 
+    font-size: 100%;
+    color: $black;
+
+    section {
+      margin: 0;
+    }
+
+    a{
+      color: $blue;
+    }
+
+    a.more{
+      display: block;
+      float: right;
+      margin: 20px 37px 0 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      color: $blue;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      &:after{
+        display: block;
+        float: right;
+        content: " \25B6";
+        transform: scale(.5,.9);
+        margin: -1px 0 0 7px;
+      }
+
+    }
+
+  }
+
+}
+
+
+// Tablet-specific layout
+.tablet {
+
+  .#{$title} {
+
+    a.more{
+      margin: 14px 37px 0 0;
+    }
+
+  }
+
+}
+
+// Mobile-specific layout
+.mobile {
+
+  .#{$title} {
+
+    a.more{
+      margin: 12px 10px 0 0;
+    }
+
+  }
+
+}

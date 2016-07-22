@@ -1,0 +1,9 @@
+## generic files to ignore
+node_modules/*
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+npm-debug.log
+*.log
