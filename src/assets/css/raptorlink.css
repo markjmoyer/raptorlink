@@ -442,5 +442,13 @@ body {
 .raptorlink header h2,
 .raptorlink header p {
   text-align: center; }
+  .raptorlink header h1.demo,
+  .raptorlink header h2.demo,
+  .raptorlink header p.demo {
+    text-align: center; }
+.raptorlink .active {
+  background-color: #000000; }
+.raptorlink footer p {
+  text-align: center; }
 
 /*# sourceMappingURL=raptorlink.css.map */

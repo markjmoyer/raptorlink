@@ -7,8 +7,21 @@
         h2,
         p {
             text-align: center;
+            &.demo {
+              text-align: center;
+            }
         }
 
+    }
+
+    .active {
+      background-color: $black;
+    }
+
+    footer {
+      p {
+        text-align: center;
+      }
     }
 }
 

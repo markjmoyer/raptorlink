@@ -28,6 +28,15 @@ module.exports = function(grunt) {
       }
     },
 
+    // Bootstrap HTML linter.
+    bootlint: {
+        options: {
+        stoponerror: false,
+        relaxerror: ['W003', 'W001', 'W002', 'W005'] // Use https://github.com/twbs/bootlint/wiki for error codes
+    },
+    files: ['src/index.html', 'src/*.html']
+    },
+
     // Run JS through JSHint
     jshint: {
       options: {
@@ -260,7 +269,7 @@ module.exports = function(grunt) {
               '<%= dirs.dest %>/assets/css/vendor/*.css',
               '<%= dirs.dest %>/assets/css/**/*.css'
             ],
-          '<%= dirs.dest %>/imdb.html':
+          '<%= dirs.dest %>/about.html':
             [
               '<%= dirs.dest %>/assets/js/vendor/**/*.js',
               '<%= dirs.dest %>/assets/js/**/*.js',
@@ -353,6 +362,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');    // Load the Grunt watch plugin
   grunt.loadNpmTasks('grunt-contrib-clean');    // Cleans the target (dist) directory on build
   grunt.loadNpmTasks('grunt-htmlclean');        // Cleans the target HTML content
+  grunt.loadNpmTasks('grunt-bootlint');         // Bootstrap Lint task
 
   // Execute tasks
   grunt.registerTask('default', [
@@ -369,7 +379,8 @@ module.exports = function(grunt) {
     'simple_include',
     'injector',
     'replace',
-    'htmlclean'
+    'htmlclean',
+    'bootlint'
   ]);
 
 };
