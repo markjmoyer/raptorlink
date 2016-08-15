@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       dest: 'dist',
       bower: 'bower_components'
     },
-
+    // bump the version numbers up by 1
     bump: {
       options: {
         files: ['package.json','bower.json'],
@@ -27,8 +27,7 @@ module.exports = function(grunt) {
         globalReplace: false
       }
     },
-
-    // Bootstrap HTML linter.
+    // Bootstrap linter.
     bootlint: {
         options: {
         stoponerror: false,
