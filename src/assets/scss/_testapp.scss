@@ -1,35 +1,34 @@
-
 // General layout overrides
-
 .#{$title} {
-    header {
-        h1,
-        h2,
-        p {
-            text-align: center;
-            &.demo {
-              text-align: center;
-            }
-        }
-
+  header {
+    h1,
+    h2,
+    p {
+      text-align: center;
     }
 
+    .demo {
+      text-align: center;
+    }
+  }
+  li {
     .active {
       background-color: $black;
     }
+  }
 
-    footer {
-      p {
-        text-align: center;
-      }
+
+  footer {
+    p {
+      text-align: center;
     }
+  }
 }
-
 
 
 // Tablet-specific layout overrides
 
-.tablet{
+.tablet {
   .#{$title} {
 
   }
@@ -39,7 +38,7 @@
 
 // Mobile-specific layout overrides
 
-.mobile{
+.mobile {
   .#{$title} {
 
   }
