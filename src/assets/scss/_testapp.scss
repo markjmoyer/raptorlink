@@ -1,5 +1,6 @@
 // General layout overrides
 .#{$title} {
+
   header {
     h1,
     h2,
@@ -11,6 +12,9 @@
       text-align: center;
     }
   }
+
+
+
   li {
     .active {
       background-color: $black;

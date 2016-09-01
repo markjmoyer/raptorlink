@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   testData.init();
   activeNavClass.init();
+  activeHamburgerClass.init();
 
 });
 
@@ -14,6 +15,18 @@ var activeNavClass = {
       $(this).addClass('active');
     });
 
+  }
+};
+
+// trigger the hamburger animation(s) by toggling the is-active class
+var activeHamburgerClass = {
+  init: function () {
+
+    $('.navbar-inverse').hide();
+    $('button.hamburger').on('click', function () {
+      $(this).toggleClass('is-active, modal-on');
+      $('.navigation-modal').show();
+    });
   }
 };
 
